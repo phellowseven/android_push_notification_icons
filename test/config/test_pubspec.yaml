@@ -1,0 +1,7 @@
+dev_dependencies:
+
+  android_push_notification_icons:
+    path: ../../
+
+android_notification_icons:
+  image_path: "assets/images/icon-710x599.png"
