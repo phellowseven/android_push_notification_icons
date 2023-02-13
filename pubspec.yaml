@@ -1,6 +1,6 @@
 name: android_push_notification_icons
 description: A package which simplifies the task of updating your android push notification icons.
-version: 0.1.0
+version: 0.1.1
 maintainer: Konstantin Kinzel (@KonstantinKinzel)
 
 dependencies:
