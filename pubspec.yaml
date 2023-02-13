@@ -4,9 +4,9 @@ version: 0.1.0
 maintainer: Konstantin Kinzel (@KonstantinKinzel)
 
 dependencies:
-  args: ^2.3.1
-  image: ^3.1.3
-  path: ^1.8.0
+  args: ^2.4.0
+  image: ^4.0.0
+  path: ^1.8.2
   yaml: ^3.1.1
 
 environment:

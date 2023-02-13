@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:image/image.dart';
 
 import 'constants.dart' as constants;
-import 'utils.dart';
+import 'utils.dart' as utils;
 
 class AndroidIconTemplate {
   AndroidIconTemplate({required this.size, required this.directoryName});
@@ -23,13 +23,13 @@ final List<AndroidIconTemplate> androidNotificationIcons =
 
 void createDefaultIcons(
     Map<String, dynamic> flutterLauncherIconsConfig, String? flavor) {
-  printStatus('Starting Android push notification icons creation');
+  utils.printStatus('Starting Android push notification icons creation');
   final String filePath = getAndroidIconPath(flutterLauncherIconsConfig);
-  final Image? image = decodeImageFile(filePath);
+  final Image? image = utils.decodeImageFile(filePath);
   if (image == null) {
     return;
   }
-  printStatus(
+  utils.printStatus(
       'Creating/overwriting the push notification icons with new icons');
   for (AndroidIconTemplate template in androidNotificationIcons) {
     overwriteExistingIcons(template, image, constants.androidFileName, flavor);
@@ -45,7 +45,7 @@ void overwriteExistingIcons(
   String filename,
   String? flavor,
 ) {
-  final Image newFile = createResizedImage(template.size, image);
+  final Image newFile = utils.createResizedImage(template.size, image);
   File(constants.androidResFolder(flavor) +
           template.directoryName +
           '/' +
